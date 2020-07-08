@@ -1,0 +1,106 @@
+1.create a drop down list in httml:
+    By using <select> in html we create drop down list.
+	Example:
+		<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+2.get the value from drop down list:
+
+	1)var as = document.form1.ddlViewBy.value;
+		for using id selector:
+	2)var e = document.getElementById("ddlViewBy");
+	3)var strUser = e.options[e.selectedIndex].value;
+
+3.creating buttons that display words in same html page:
+
+<button onclick="myFunction()">Hello world</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+4.concatination of the string to form sentence:
+
+<button onclick="myFunction()" id="abc" value="hello" >hello</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str1 = "";
+  var str2 = document.getElementById("abc").value;
+  var res = str1.concat(str2);
+  document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+
+5.removing text by clicking on button:
+
+	<input type="button" onclick="delete()" value="del"/>
+	<p id="text">
+	asdf
+	asdv
+	</p>
+	function delete(){
+		document.getElementById("text").innerHTML=" ";
+			}
+
+6.comparing two strings:
+
+	   <body>
+      <button onclick="compareStr()">Compare Strings</button>
+      <p id="test"></p>
+      <script>
+         function compareStr() {
+            var string1 = "World";
+            var string2 = "World";
+            var result = string1.localeCompare(string2);
+
+            document.getElementById("test").innerHTML = result;
+         }
+      </script>
+
+7.show,hide button with jquery:
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+<body>
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
+
+8.changing button text on click:
+
+	<input onclick="change()" type="button" value="open" id="mybutton"></input>
+	function change()
+	{
+		document.getElementById("mybutton").value="close";
+	}
+
